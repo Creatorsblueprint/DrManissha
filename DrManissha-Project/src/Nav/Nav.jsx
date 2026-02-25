@@ -46,7 +46,7 @@ const Nav = () => {
         <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
                 <div className={styles.logoWrapper}>
-                    <img src="/logo.png" alt="Dr. Manissha Pandit" className={styles.logoImage} />
+                    <img src="/logo.svg" alt="Dr. Manissha Pandit" className={styles.logoImage} />
                 </div>
 
                 <ul className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ''}`}>
