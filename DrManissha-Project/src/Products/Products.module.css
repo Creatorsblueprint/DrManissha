@@ -1,0 +1,150 @@
+.productsSection {
+    background-color: var(--white);
+    padding: 120px 5%;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.kicker {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--olive-dark);
+    margin-bottom: 20px;
+    display: block;
+    opacity: 0.6;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--olive-dark);
+    margin-bottom: 25px;
+}
+
+.description {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555d51;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+}
+
+.productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .productCard {
+        align-items: flex-start;
+    }
+}
+
+.imageWrapper {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-color: var(--beige-bg);
+}
+
+.productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.productCard:hover .productImage {
+    transform: scale(1.03);
+}
+
+.productInfo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .productInfo {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+.prodTitle {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--olive-dark);
+    margin-bottom: 12px;
+}
+
+.category {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #7a8276;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.prodDesc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    max-width: 90%;
+}
+
+.learnMore {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--olive-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--olive-dark);
+    padding-bottom: 4px;
+    transition: opacity 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .learnMore {
+        display: inline-block;
+        width: auto;
+        text-align: left;
+    }
+}
+
+.learnMore:hover {
+    opacity: 0.7;
+}

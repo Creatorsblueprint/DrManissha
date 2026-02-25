@@ -1,0 +1,139 @@
+.footer {
+    background-color: var(--olive-dark);
+    color: var(--beige-light);
+    padding: 80px 5% 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 60px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(235, 220, 201, 0.2);
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+.brandCol {
+    flex: 2;
+    max-width: 400px;
+}
+
+.logoTitle {
+    font-family: var(--font-logo);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--beige-light);
+}
+
+.tagline {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.socialIcon .iconBox {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--beige-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.socialIcon .iconBox:hover {
+    background-color: var(--beige-light);
+    color: var(--olive-dark);
+}
+
+.linksCol {
+    flex: 1;
+}
+
+.linksHeading {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: var(--beige-light);
+    opacity: 0.7;
+}
+
+.linksList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .linksList {
+        align-items: flex-start;
+    }
+}
+
+.linksList a {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--beige-light);
+    transition: opacity 0.3s ease;
+}
+
+.linksList a:hover {
+    opacity: 0.7;
+}
+
+.bottomBar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .bottomBar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.bottomBar p {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    color: var(--beige-light);
+    margin: 0;
+}
+
+.emailLink {
+    color: var(--beige-light);
+    text-decoration: underline;
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease;
+}
+
+.emailLink:hover {
+    opacity: 0.8;
+}

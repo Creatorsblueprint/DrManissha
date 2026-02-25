@@ -1,0 +1,179 @@
+.aboutSection {
+    background-color: var(--beige-bg);
+    padding: 100px 5%;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Biograhpy Area */
+.bioArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+@media (min-width: 900px) {
+    .bioArea {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+.imageContent,
+.textContent {
+    flex: 1;
+}
+
+.imageContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 900px) {
+    .imageContent {
+        justify-content: flex-start;
+    }
+}
+
+.aboutImage {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: var(--olive-dark);
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #3f473c;
+    font-weight: 300;
+}
+
+.iconBoxes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+@media (min-width: 600px) {
+    .iconBoxes {
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+
+.iconBox {
+    flex: 1;
+}
+
+.boxTitle {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: var(--olive-dark);
+}
+
+.boxText {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #555d51;
+}
+
+.actionBtn {
+    background-color: var(--olive-dark);
+    color: var(--white);
+    padding: 14px 30px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .actionBtn {
+        width: auto;
+    }
+}
+
+.actionBtn:hover {
+    background-color: #3b4238;
+}
+
+/* Accreditations Area */
+.accreditationsArea {
+    background-color: #f9f6f2;
+    text-align: center;
+    padding: 80px 5%;
+}
+
+.accTitle {
+    font-size: 2rem;
+    color: var(--olive-dark);
+    margin-bottom: 50px;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .cardsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background-color: #ece1d1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardIcon {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.cardTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--olive-dark);
+}
+
+.cardText {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555d51;
+}
