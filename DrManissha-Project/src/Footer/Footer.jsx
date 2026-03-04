@@ -11,6 +11,18 @@ const Footer = () => {
                     <p className={styles.tagline}>
                         Integrating science and soul to empower women through their most transformative hormonal shifts.
                     </p>
+                    <div className={styles.socialIcons}>
+                        <a href="https://www.youtube.com/@hairhormonecoach" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                            <div className={styles.iconBox}>
+                                <i className="ri-youtube-line"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/hairhormonecoach" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                            <div className={styles.iconBox}>
+                                <i className="ri-instagram-line"></i>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
                 <div className={styles.linksCol}>

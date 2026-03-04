@@ -46,6 +46,18 @@
     margin-bottom: 30px;
 }
 
+.socialIcons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .socialIcons {
+        justify-content: flex-start;
+    }
+}
+
 .socialIcon .iconBox {
     width: 40px;
     height: 40px;
@@ -54,7 +66,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-body);
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
