@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className={styles.brandCol}>
                     <h2 className={styles.logoTitle}>DR. MANISSHA PANDIT</h2>
                     <p className={styles.tagline}>
-                        Integrating science and soul to empower women through their most transformative hormonal shifts.
+                        Integrating science and soul to help women navigate midlife hormonal transitions with clarity, confidence, and vitality.
                     </p>
                     <div className={styles.socialIcons}>
                         <a href="https://www.youtube.com/@hairhormonecoach" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>

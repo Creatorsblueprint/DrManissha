@@ -16,10 +16,10 @@ const Home = () => {
                 >
                     <span className={styles.kicker}>INTEGRATIVE & FUNCTIONAL MEDICINE</span>
                     <h1 className={styles.title}>
-                        Decode Your<br />Hormones.<br />Reclaim Your<br />Hair.<br />Restore Your<br />Energy.
+                        Decode Your Hormones to<br />Reclaim Your Hair, Energy<br />& Feminine Power.
                     </h1>
                     <p className={styles.subtitle}>
-                        With Dr. Manissha Pandit's science-backed coaching<br />and signature Ayurvedic oil rituals.
+                        Helping women in their 30s and 40s restore hair, balance progesterone, and move through perimenopause with clarity and confidence.
                     </p>
                     <div className={styles.btnGroup}>
                         <Link to="/ebook" className={styles.primaryBtn}>Explore the Ebook</Link>

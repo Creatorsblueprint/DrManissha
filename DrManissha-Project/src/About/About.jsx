@@ -29,20 +29,23 @@ const About = () => {
                         >
                             <h2 className={styles.title}>Meet Dr. Manissha Pandit</h2>
                             <p className={styles.description}>
-                                Dr. Manissha Pandit is an Integrative & Functional Medicine Health Coach (IIN New York) and former dentist specializing in women's hormonal health and hair restoration. She helps women in their 30s and 40s decode progesterone decline, nervous system shifts, and early perimenopause.
+                                Dr Manissha Pandit is an Integrative & Functional Medicine Health Coach (IIN, New York) and former dentist who integrates functional medicine, endocrine biology, and Ayurvedic nervous system therapy to recalibrate hormonal transitions at their root, specializing in women’s hormonal health and hair restoration.
                             </p>
                             <p className={styles.description}>
-                                Her unique approach blends clinical precision with ancestral wisdom, utilizing <strong>functional nutrition, marma activation, sound healing, and subconscious reprogramming</strong> to address the root causes of imbalance.
+                                She supports women in their 30s and 40s navigating progesterone decline, nervous system dysregulation, and early perimenopause — helping them decode what their symptoms are truly signaling.
+                            </p>
+                            <p className={styles.description}>
+                                Her approach blends functional nutrition and biological data with Ayurvedic marma point therapy, sound healing, and NLP-based subconscious reprogramming to address the root cause — not just the symptom.
                             </p>
 
                             <div className={styles.iconBoxes}>
                                 <div className={styles.iconBox}>
-                                    <h4 className={styles.boxTitle}>The Science</h4>
-                                    <p className={styles.boxText}>Functional data and biological decoding of hormone decline.</p>
+                                    <h4 className={styles.boxTitle}>THE SCIENCE</h4>
+                                    <p className={styles.boxText}>Functional lab analysis, biological hormone mapping, and root-cause decoding of midlife hormonal shifts.</p>
                                 </div>
                                 <div className={styles.iconBox}>
-                                    <h4 className={styles.boxTitle}>The Soul</h4>
-                                    <p className={styles.boxText}>Ayurvedic rituals and subconscious shifts for deep healing.</p>
+                                    <h4 className={styles.boxTitle}>THE SOUL</h4>
+                                    <p className={styles.boxText}>Ayurvedic rituals, marma therapy, nervous system recalibration, and subconscious healing for deep feminine restoration.</p>
                                 </div>
                             </div>
 
@@ -72,19 +75,24 @@ const About = () => {
                         viewport={{ once: true, amount: 0.3 }}
                     >
                         <motion.div className={styles.card} variants={fadeIn}>
-                            <img src="/Icons/acc-1.svg" alt="IIN New York" className={styles.cardIcon} />
-                            <h4 className={styles.cardTitle}>IIN New York</h4>
-                            <p className={styles.cardText}>CERTIFIED HEALTH COACH</p>
+                            <img src="/Icons/acc-3.svg" alt="Doctor of Dental Surgery" className={styles.cardIcon} />
+                            <h4 className={styles.cardTitle}>Doctor of Dental Surgery</h4>
                         </motion.div>
                         <motion.div className={styles.card} variants={fadeIn}>
-                            <img src="/Icons/acc-2.svg" alt="Functional Medicine" className={styles.cardIcon} />
-                            <h4 className={styles.cardTitle}>Functional Medicine</h4>
-                            <p className={styles.cardText}>INTEGRATIVE SPECIALIST</p>
+                            <img src="/Icons/acc-1.svg" alt="Certified Integrative Health Coach" className={styles.cardIcon} />
+                            <h4 className={styles.cardTitle}>Certified Integrative Health Coach (IIN, New York)</h4>
                         </motion.div>
                         <motion.div className={styles.card} variants={fadeIn}>
-                            <img src="/Icons/acc-3.svg" alt="Doctor of Dentistry" className={styles.cardIcon} />
-                            <h4 className={styles.cardTitle}>Doctor of Dentistry</h4>
-                            <p className={styles.cardText}>CLINICAL BACKGROUND</p>
+                            <img src="/Icons/acc-2.svg" alt="Functional Medicine Practitioner" className={styles.cardIcon} />
+                            <h4 className={styles.cardTitle}>Functional Medicine Practitioner</h4>
+                        </motion.div>
+                        <motion.div className={styles.card} variants={fadeIn}>
+                            <img src="/Icons/acc-1.svg" alt="Certified NLP Practitioner" className={styles.cardIcon} />
+                            <h4 className={styles.cardTitle}>Certified NLP Practitioner</h4>
+                        </motion.div>
+                        <motion.div className={styles.card} variants={fadeIn}>
+                            <img src="/Icons/acc-2.svg" alt="Sound Healing Practitioner" className={styles.cardIcon} />
+                            <h4 className={styles.cardTitle}>Sound Healing Practitioner</h4>
                         </motion.div>
                     </motion.div>
                 </div>
