@@ -6,10 +6,55 @@ import styles from './Ebook.module.css';
 const Ebook = () => {
     const [email, setEmail] = useState('');
 
+    const [isLoading, setIsLoading] = useState(false);
+
     const isValidEmail = (email) => {
         // Basic email validation regex
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
+
+    const handlePayment = async (e) => {
+        e.preventDefault();
+        if (!isValidEmail(email)) return;
+
+        setIsLoading(true);
+        try {
+            const response = await fetch('https://drbackend-648711352735.me-west1.run.app/api/create-payment-intent', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    amount: 150, // Ebook price
+                    email: email,
+                    successUrl: window.location.origin + '?success=true',
+                    cancelUrl: window.location.origin + '?cancel=true'
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Payment initialization failed');
+            }
+
+            const data = await response.json();
+
+            // Extract redirect URL from Ziina backend response
+            const checkoutUrl = data.redirect_url;
+
+            if (checkoutUrl) {
+                window.location.href = checkoutUrl;
+            } else {
+                console.error('No checkout URL received from backend', data);
+                alert("Could not initiate payment. Please try again.");
+            }
+        } catch (error) {
+            console.error('Error during payment processing:', error);
+            alert("Something went wrong. Please try again later.");
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     return (
         <section id="ebook" className={styles.ebookSection}>
             <div className={styles.container}>
@@ -43,20 +88,22 @@ const Ebook = () => {
                     </p>
                     <p className={styles.price}>150 AED</p>
 
-                    <form className={styles.formContainer} onSubmit={(e) => e.preventDefault()}>
+                    <form className={styles.formContainer} onSubmit={handlePayment}>
                         <input
                             type="email"
                             className={styles.inputField}
                             placeholder="Enter your email address"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            disabled={isLoading}
+                            required
                         />
                         <button
                             type="submit"
                             className={styles.submitBtn}
-                            disabled={!isValidEmail(email)}
+                            disabled={!isValidEmail(email) || isLoading}
                         >
-                            Get Instant Access
+                            {isLoading ? 'Processing...' : 'Get Instant Access'}
                         </button>
                     </form>
                 </motion.div>
