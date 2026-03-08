@@ -5,6 +5,7 @@ import Home from './Home/Home';
 import About from './About/About';
 import Ebook from './Ebook/Ebook';
 import Products from './Products/Products';
+import Testimonials from './Testimonials/Testimonials';
 import Gallery from './Gallery/Gallery';
 import Footer from './Footer/Footer';
 import PaymentSuccess from './paymentPopups/PaymentSuccess';
@@ -40,6 +41,7 @@ const SinglePageLayout = () => {
       <About />
       <Ebook />
       <Products />
+      <Testimonials />
       <Gallery />
     </>
   );
