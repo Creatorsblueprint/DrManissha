@@ -49,7 +49,7 @@ const About = () => {
                                 </div>
                             </div>
 
-                            <button className={styles.actionBtn}>Book a Consultation</button>
+                            <button className={styles.actionBtn} onClick={() => window.open("https://calendly.com/hairhormonecoach/kim", "_blank", "noopener,noreferrer")}>Book a Consultation</button>
                         </motion.div>
                     </div>
                 </div>
