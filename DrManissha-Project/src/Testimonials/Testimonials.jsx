@@ -14,7 +14,7 @@ const testimonialsData = [
     id: 2,
     name: "Nadia Tareen",
     image: "/Images/testimonial2.png",
-    text: "“I met Dr Manisha at one of her events and was instantly impressed by her knowledge and calming presence. After joining her programme, my health markers stabilised and I feel more energised and balanced. Her Manetra Scalp Oil is also beautiful—nourishing, lightweight, and now part of my self-care ritual.”",
+    text: "“I met Dr Manissha at one of her events and was instantly impressed by her knowledge and calming presence. After joining her programme, my health markers stabilised and I feel more energised and balanced. Her Manetra Scalp Oil is also beautiful—nourishing, lightweight, and now part of my self-care ritual.”",
   },
   {
     id: 3,
