@@ -78,6 +78,38 @@ const Testimonials = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Three-Month Transformation Section */}
+        <section className={styles.transformationSection}>
+          <div className={styles.container}>
+            <motion.h3
+              className={styles.transformationTitle}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={fadeIn}
+            >
+              <span className={styles.kicker}>
+                “Real Healing. Real Women. Real Results.”
+              </span>
+              Three‑Month Transformation
+            </motion.h3>
+
+            <motion.div
+              className={styles.transformationImageWrapper}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeIn}
+            >
+              <img
+                src="/Images/transformation.png"
+                alt="Three Month Transformation"
+                className={styles.transformationImage}
+              />
+            </motion.div>
+          </div>
+        </section>
       </div>
     </section>
   );

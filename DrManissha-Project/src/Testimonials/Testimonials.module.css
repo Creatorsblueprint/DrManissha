@@ -38,6 +38,37 @@
     gap: 40px;
 }
 
+/* Transformation Section */
+.transformationSection {
+    background-color: #f9f6f2;
+    /* matches your soft neutral palette */
+    padding: 100px 5%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.transformationTitle {
+    font-size: 2.2rem;
+    color: var(--olive-dark);
+    margin-bottom: 50px;
+    font-family: var(--font-heading);
+}
+
+/* Centered responsive image */
+.transformationImageWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.transformationImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    object-fit: cover;
+}
+
+
 @media (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
