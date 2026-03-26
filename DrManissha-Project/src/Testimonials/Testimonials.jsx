@@ -34,6 +34,12 @@ const testimonialsData = [
     image: "/Images/testimonial5.png",
     text: "“Manetraa Ayurvedic hair oil has become my favourite Sunday ritual. Massaging it into my scalp helps me unwind while nourishing my hair. I’ve noticed a real improvement in my hair quality, and the baby hairs along my hairline are proof.”",
   },
+  {
+    id: 6,
+    name: "Mahek Talreja",
+    image: "/Images/testimonial6.png",
+    text: "“I met Manissha in Dubai and got her magical hair oil. Since then, I’ve been using it consistently and the results have been amazing. I’ve noticed baby hair along my hairline, my hair fall is now minimal, and most surprisingly, my premature grey hair has turned black again. I was truly amazed to see such a transformation in just three months.”",
+  },
 ];
 
 const Testimonials = () => {
