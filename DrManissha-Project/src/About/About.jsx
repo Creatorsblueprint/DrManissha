@@ -153,6 +153,16 @@ const About = () => {
               />
               <h4 className={styles.cardTitle}>Sound Healing Practitioner</h4>
             </motion.div>
+            <motion.div className={styles.card} variants={fadeIn}>
+              <img
+                src="/Icons/acc-2.svg"
+                alt="Yoga Teacher Training"
+                className={styles.cardIcon}
+              />
+              <h4 className={styles.cardTitle}>
+                300-Hour Yoga Teacher Training
+              </h4>
+            </motion.div>
           </motion.div>
         </div>
       </section>
