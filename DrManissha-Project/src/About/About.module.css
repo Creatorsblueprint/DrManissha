@@ -124,6 +124,23 @@
     background-color: #3b4238;
 }
 
+.consultationNote {
+    font-size: 0.85rem;
+    color: #555d51;
+    /* soft muted tone like your boxText */
+    margin-top: 12px;
+    opacity: 0.8;
+    line-height: 1.4;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .consultationNote {
+        text-align: center;
+    }
+}
+
+
 /* Accreditations Area */
 .accreditationsArea {
     background-color: #f9f6f2;

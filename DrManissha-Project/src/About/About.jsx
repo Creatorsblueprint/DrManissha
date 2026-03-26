@@ -82,6 +82,9 @@ const About = () => {
               >
                 Book a Consultation
               </button>
+              <p className={styles.consultationNote}>
+                Consultation bookings require a fee, payable during scheduling.
+              </p>
             </motion.div>
           </div>
         </div>
