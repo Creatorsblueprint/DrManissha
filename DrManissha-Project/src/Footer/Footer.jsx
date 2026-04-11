@@ -79,11 +79,8 @@ const Footer = () => {
           <p className={styles.tagline} style={{ marginBottom: "15px" }}>
             Interested in coaching or wholesale? Contact us directly.
           </p>
-          <a
-            href="mailto:hello@drmanisshapandit.com"
-            className={styles.emailLink}
-          >
-            hello@drmanisshapandit.com
+          <a href="mailto:info@houseofmhealth.com" className={styles.emailLink}>
+            info@houseofmhealth.com
           </a>
         </div>
       </div>
