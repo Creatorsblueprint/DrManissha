@@ -27,10 +27,11 @@ const Ebook = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            amount: 106.5, // Ebook price
+            amount: 143.25, // Ebook price
             email: email,
             successUrl: window.location.origin + "?success=true",
             cancelUrl: window.location.origin + "?cancel=true",
+            type: "ebook",
           }),
         },
       );
@@ -99,7 +100,7 @@ const Ebook = () => {
             A perimenopause coaching guide to decoding progesterone, nervous
             system shifts, and early midlife changes before the chaos hits.
           </p>
-          <p className={styles.price}>$ 29</p>
+          <p className={styles.price}>$ 39</p>
 
           <form className={styles.formContainer} onSubmit={handlePayment}>
             <input
@@ -118,6 +119,9 @@ const Ebook = () => {
             >
               {isLoading ? "Processing..." : "Get Instant Access"}
             </button>
+            <p className={styles.discoveryNote}>
+              <a href="#about">Book a discovery call</a> and get the ebook FREE.
+            </p>
           </form>
         </motion.div>
       </div>

@@ -146,3 +146,24 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+.discoveryNote {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #e2caa5;
+    /* same gold tone as your title */
+    text-align: center;
+    opacity: 0.9;
+}
+
+.discoveryNote a {
+    color: #ffffff;
+    /* white for contrast */
+    font-weight: 600;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.discoveryNote a:hover {
+    opacity: 0.7;
+}
