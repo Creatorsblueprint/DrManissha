@@ -1,0 +1,87 @@
+/* Wrapper to position everything */
+.wrapper {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* WhatsApp Button */
+.whatsappButton {
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+
+.whatsappButton:hover {
+    transform: scale(1.08);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Tooltip */
+.tooltip {
+    background-color: #111;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Chat bubble */
+.chatBubble {
+    background-color: white;
+    color: #333;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    max-width: 220px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.35s ease;
+    pointer-events: none;
+}
+
+/* Hover effects */
+.wrapper:hover .tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wrapper:hover .chatBubble {
+    opacity: 1;
+    transform: translateX(0);
+}
