@@ -108,7 +108,7 @@ const Products = () => {
                 activate marma points and stimulate follicles.
               </p>
 
-              {/* <div className={styles.ingredientsBox}>
+              <div className={styles.ingredientsBox}>
                 <h4 className={styles.ingTitle}>Ingredients</h4>
                 <p className={styles.ingList}>
                   Cold pressed coconut oil, Olive oil, Almond oil, Castor oil,
@@ -119,7 +119,7 @@ const Products = () => {
                   extract, Amla fruit extract, Pumpkin seed oil, Saw palmetto
                   fruit extract.
                 </p>
-              </div> */}
+              </div>
 
               <form className={styles.purchaseForm} onSubmit={handlePayment}>
                 <h4 className={styles.formHeader}>Get Yours Today</h4>
@@ -151,7 +151,9 @@ const Products = () => {
                 <button
                   type="submit"
                   className={styles.submitBtn}
-                  disabled={isLoading || !isValidEmail(email) || deliveryFee === "0"}
+                  disabled={
+                    isLoading || !isValidEmail(email) || deliveryFee === "0"
+                  }
                 >
                   {isLoading ? "Processing..." : "Buy Now"}
                 </button>
