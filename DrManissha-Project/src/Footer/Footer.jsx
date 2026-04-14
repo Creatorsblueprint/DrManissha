@@ -71,6 +71,15 @@ const Footer = () => {
             <li>
               <Link to="/products">House of M</Link>
             </li>
+            <li>
+              <a
+                href="https://pay.ziina.com/houseofmanetraa/rJQQAkoPQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Annual Membership
+              </a>
+            </li>
           </ul>
         </div>
 

@@ -105,7 +105,7 @@ const Products = () => {
 
               <p className={styles.prodDesc}>
                 Infused with hand-selected herbs and pure essential oils to
-                activate marma points and stimulate follicles.
+                activate marma points and stimulate hair follicles.
               </p>
 
               <div className={styles.ingredientsBox}>
