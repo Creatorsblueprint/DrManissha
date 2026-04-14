@@ -115,12 +115,12 @@ const Ebook = () => {
             <button
               type="submit"
               className={styles.submitBtn}
-              // disabled={!isValidEmail(email) || isLoading}
-              disabled
+              disabled={!isValidEmail(email) || isLoading}
+              // disabled
             >
               {isLoading ? "Processing..." : "Get Instant Access"}
             </button>
-            <p className={styles.discoveryNote}>Coming Soon!</p>
+            {/* <p className={styles.discoveryNote}>Coming Soon!</p> */}
             <p className={styles.discoveryNote}>
               <a href="#about">Book a discovery call</a> and get the ebook FREE.
             </p>
