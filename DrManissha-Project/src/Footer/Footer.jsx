@@ -77,7 +77,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Annual Membership
+                <b> Annual Membership </b>
               </a>
             </li>
           </ul>
