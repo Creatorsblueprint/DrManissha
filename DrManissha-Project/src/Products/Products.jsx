@@ -17,50 +17,60 @@ const Products = () => {
 
   const handlePayment = async (e) => {
     e.preventDefault();
-    if (!isValidEmail(email)) return;
+    // if (!isValidEmail(email)) return;
     if (deliveryFee === 0) {
       alert("Please select a delivery location");
       return;
     }
 
-    setIsLoading(true);
-    try {
-      const response = await fetch(
-        "https://drbackend-648711352735.me-west1.run.app/api/create-payment-intent",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            amount: totalPrice,
-            email: email,
-            successUrl: window.location.origin + "?success=true",
-            cancelUrl: window.location.origin + "?cancel=true",
-            type: "product",
-          }),
-        },
-      );
+    // Direct payment logic
+    const UAE_LINK = "https://pay.ziina.com/houseofmanetraa/JeaGEuPYU";
+    const INTL_LINK = "https://pay.ziina.com/houseofmanetraa/H7TiFSfuA";
 
-      if (!response.ok) {
-        throw new Error("Payment initialization failed");
-      }
-
-      const data = await response.json();
-      const checkoutUrl = data.redirect_url;
-
-      if (checkoutUrl) {
-        window.location.href = checkoutUrl;
-      } else {
-        console.error("No checkout URL received from backend", data);
-        alert("Could not initiate payment. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error during payment processing:", error);
-      alert("Something went wrong. Please try again later.");
-    } finally {
-      setIsLoading(false);
+    if (deliveryFee === "30") {
+      window.location.href = UAE_LINK;
+    } else if (deliveryFee === "180") {
+      window.location.href = INTL_LINK;
     }
+
+    // setIsLoading(true);
+    // try {
+    //   const response = await fetch(
+    //     "https://drbackend-648711352735.me-west1.run.app/api/create-payment-intent",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({
+    //         amount: totalPrice,
+    //         email: email,
+    //         successUrl: window.location.origin + "?success=true",
+    //         cancelUrl: window.location.origin + "?cancel=true",
+    //         type: "product",
+    //       }),
+    //     },
+    //   );
+
+    //   if (!response.ok) {
+    //     throw new Error("Payment initialization failed");
+    //   }
+
+    //   const data = await response.json();
+    //   const checkoutUrl = data.redirect_url;
+
+    //   if (checkoutUrl) {
+    //     window.location.href = checkoutUrl;
+    //   } else {
+    //     console.error("No checkout URL received from backend", data);
+    //     alert("Could not initiate payment. Please try again.");
+    //   }
+    // } catch (error) {
+    //   console.error("Error during payment processing:", error);
+    //   alert("Something went wrong. Please try again later.");
+    // } finally {
+    //   setIsLoading(false);
+    // }
   };
 
   return (
@@ -123,7 +133,7 @@ const Products = () => {
 
               <form className={styles.purchaseForm} onSubmit={handlePayment}>
                 <h4 className={styles.formHeader}>Get Yours Today</h4>
-                <input
+                {/* <input
                   type="email"
                   placeholder="Enter your email"
                   className={styles.inputField}
@@ -131,7 +141,7 @@ const Products = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isLoading}
                   required
-                />
+                /> */}
                 <select
                   className={styles.selectField}
                   value={deliveryFee}
@@ -151,9 +161,10 @@ const Products = () => {
                 <button
                   type="submit"
                   className={styles.submitBtn}
-                  disabled={
-                    isLoading || !isValidEmail(email) || deliveryFee === "0"
-                  }
+                  // disabled={
+                  //   isLoading || !isValidEmail(email) || deliveryFee === "0"
+                  // }
+                  disabled={isLoading || deliveryFee === 0}
                 >
                   {isLoading ? "Processing..." : "Buy Now"}
                 </button>
