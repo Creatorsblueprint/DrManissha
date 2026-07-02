@@ -73,11 +73,20 @@ const Footer = () => {
             </li>
             <li>
               <a
+                href="https://feelvaleo.com/en-ae/dubai/services/hair-hormone-test-toolkit?utm_source=Affiliate&utm_medium=Dr%20Manissha&utm_campaign=hair_hormone_test_campaign"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong><b>Hair Hormone Test</b></strong>
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://pay.ziina.com/houseofmanetraa/rJQQAkoPQ"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <b> Annual Membership </b>
+                <strong><b> Annual Membership </b></strong>
               </a>
             </li>
           </ul>
@@ -96,7 +105,16 @@ const Footer = () => {
 
       <div className={styles.bottomBar}>
         <p>&copy; 2026 DR. MANISSHA PANDIT. ALL RIGHTS RESERVED.</p>
-        <p>DEVELOPED BY CREATORS BLUEPRINT</p>
+        <p>
+          DEVELOPED BY{" "}
+          <a
+            href="https://creatorsblueprint.io"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>CREATORS BLUEPRINT</strong>
+          </a>
+        </p>
       </div>
     </footer>
   );
