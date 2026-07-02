@@ -88,7 +88,7 @@ const Products = () => {
                   Buy Now
                 </a>
                 <a
-                  href="https://wa.me/971589771786?text=Hi%20Dr%20Manissha,%20I'd%20like%20to%20avail%20of%20the%20special%20pre-sale%20link%20for%20the%20Manetraa%20Rituals%20Kit."
+                  href="https://wa.me/971589771786?text=Hi%20Dr%20Manissha,%20I'd%20like%20to%20get%20the%20special%20pre-sale%20link%20for%20the%20Manetraa%20Rituals%20Kit."
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappPresaleBtn}
