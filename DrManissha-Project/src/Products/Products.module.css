@@ -503,7 +503,7 @@
 
 .subProductImageWrapper {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 3/4;
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -518,7 +518,7 @@
 }
 
 .subProductCard:hover .subProductImg {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .subProductTitle {
