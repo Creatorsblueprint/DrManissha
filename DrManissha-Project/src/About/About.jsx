@@ -1,9 +1,11 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { fadeIn, slideInLeft, staggerContainer } from "../animations";
 import styles from "./About.module.css";
 
 const About = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <section id="about" className={styles.aboutSection}>
@@ -72,13 +74,7 @@ const About = () => {
 
               <button
                 className={styles.actionBtn}
-                onClick={() =>
-                  window.open(
-                    "https://calendly.com/hairhormonecoach/kim",
-                    "_blank",
-                    "noopener,noreferrer",
-                  )
-                }
+                onClick={() => setShowModal(true)}
               >
                 Book a Consultation
               </button>
@@ -201,6 +197,62 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Consultation Confirmation Modal */}
+      <AnimatePresence>
+        {showModal && (
+          <div className={styles.modalOverlay} onClick={() => setShowModal(false)}>
+            <motion.div
+              className={styles.modalContent}
+              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+            >
+              <button
+                className={styles.modalCloseBtn}
+                onClick={() => setShowModal(false)}
+                aria-label="Close modal"
+              >
+                <i className="ri-close-line"></i>
+              </button>
+              <h3 className={styles.modalTitle}>Consultation Booking</h3>
+              <p className={styles.modalText}>
+                Have you done the comprehensive bloodwork test?
+              </p>
+              <div className={styles.modalBtnGroup}>
+                <button
+                  className={styles.modalBtnYes}
+                  onClick={() => {
+                    setShowModal(false);
+                    window.open(
+                      "https://calendly.com/hairhormonecoach/kim",
+                      "_blank",
+                      "noopener,noreferrer",
+                    );
+                  }}
+                >
+                  Yes, I have
+                </button>
+                <button
+                  className={styles.modalBtnNo}
+                  onClick={() => {
+                    setShowModal(false);
+                    window.open(
+                      "https://feelvaleo.com/en-ae/dubai/services/hair-hormone-test-toolkit?utm_source=Affiliate&utm_medium=Dr%20Manissha&utm_campaign=hair_hormone_test_campaign",
+                      "_blank",
+                      "noopener,noreferrer",
+                    );
+                  }}
+                >
+                  No, order test
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
