@@ -23,7 +23,7 @@ const Home = () => {
                     </p>
                     <div className={styles.btnGroup}>
                         <Link to="/ebook" className={styles.primaryBtn}>Explore the Ebook</Link>
-                        <button className={styles.secondaryBtn}>Shop House of M</button>
+                        <Link to="/products" className={styles.secondaryBtn}>Shop House of M</Link>
                     </div>
                 </motion.div>
 
