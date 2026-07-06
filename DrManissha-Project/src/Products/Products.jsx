@@ -158,7 +158,7 @@ const Products = () => {
         </motion.div>
 
         {/* Existing Products list */}
-        {/* <div className={styles.otherProductsSection}>
+        <div className={styles.otherProductsSection}>
           <h3 className={styles.sectionDividerTitle}>Individual Formulations</h3>
           <motion.div
             className={styles.grid}
@@ -232,7 +232,7 @@ const Products = () => {
               </div>
             </motion.div>
           </motion.div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
