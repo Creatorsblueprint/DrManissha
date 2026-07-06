@@ -157,6 +157,7 @@ const Products = () => {
           </div>
         </motion.div>
 
+
         {/* Existing Products list */}
         <div className={styles.otherProductsSection}>
           <h3 className={styles.sectionDividerTitle}>Individual Formulations</h3>
