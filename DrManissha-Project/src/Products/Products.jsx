@@ -146,9 +146,9 @@ const Products = () => {
               {/* Kit Item 4 */}
               <div className={styles.subProductCard}>
                 <div className={styles.subProductImageWrapper}>
-                  <img src="/Images/kit_4.PNG" alt="Ittar Sacred Hair Mist" className={styles.subProductImg} />
+                  <img src="/Images/kit_4.PNG" alt="Hair Ittar Perfume" className={styles.subProductImg} />
                 </div>
-                <h5 className={styles.subProductTitle}>Ittar Sacred Hair Mist</h5>
+                <h5 className={styles.subProductTitle}>Hair Ittar (Perfume)</h5>
                 <p className={styles.subProductDesc}>
                   Botanical hair perfume with UV-shield actives to protect your strands all day, staying clean of the hormone-disrupting chemicals hiding in most fragrances.
                 </p>
@@ -200,7 +200,7 @@ const Products = () => {
                     Essential Oil, Brahmi leaf extract, Shikakai bark extract,
                     Tulsi leaf extract, Bhringraj leaf extract, Ashwagandha root
                     extract, Amla fruit extract, Pumpkin seed oil, Saw palmetto
-                    fruit extract.
+                    fruit extract, Saffron.
                   </p>
                 </div>
 
@@ -232,6 +232,66 @@ const Products = () => {
                 </form>
               </div>
             </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Affiliate Product Card Section */}
+        <div className={styles.affiliateSection}>
+          <h3 className={styles.sectionDividerTitle}>Recommended Diagnostics</h3>
+          <motion.div
+            className={styles.affiliateCardWrapper}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeIn}
+          >
+            <div className={styles.affiliateCard}>
+              <div className={styles.affiliateImageCol}>
+                <div className={styles.affiliateImageWrapper}>
+                  <img
+                    src="/Images/valeo_logo.png"
+                    alt="Valeo Hair Hormone Test Toolkit"
+                    className={styles.affiliateImage}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className={styles.affiliateImageFallback} style={{ display: 'none' }}>
+                    <i className="ri-shield-flash-line"></i>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.affiliateInfoCol}>
+                <span className={styles.category}>PARTNER DIAGNOSTICS</span>
+                <h3 className={styles.affiliateTitle}>Valeo Hair Hormone Test Toolkit</h3>
+                <p className={styles.affiliateDesc}>
+                  A comprehensive, at-home bloodwork test designed to analyze your primary hair and hormone biomarkers. This test is highly recommended as a preliminary step to gather biological data before scheduling your one-on-one consultation with Dr. Manissha.
+                </p>
+                <div className={styles.affiliateFeatures}>
+                  <div className={styles.featureItem}>
+                    <i className="ri-checkbox-circle-line"></i>
+                    <span>Checks key thyroid & hormone biomarkers</span>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <i className="ri-checkbox-circle-line"></i>
+                    <span>Easy at-home sample collection</span>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <i className="ri-checkbox-circle-line"></i>
+                    <span>Comprehensive digital lab report</span>
+                  </div>
+                </div>
+                <a
+                  href="https://feelvaleo.com/en-ae/dubai/services/hair-hormone-test-toolkit?utm_source=Affiliate&utm_medium=Dr%20Manissha&utm_campaign=hair_hormone_test_campaign"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.affiliateBtn}
+                >
+                  Order Test Toolkit <i className="ri-external-link-line"></i>
+                </a>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
