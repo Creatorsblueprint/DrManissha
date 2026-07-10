@@ -700,3 +700,116 @@
 .affiliateBtn:hover {
     background-color: #3b4238;
 }
+
+/* Quality Banner & Client Offer Box */
+.clientOfferBox {
+    background-color: rgba(75, 83, 71, 0.06);
+    border: 1px dashed var(--olive-dark);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (max-width: 900px) {
+    .clientOfferBox {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.clientOfferBadge {
+    background-color: var(--olive-dark);
+    color: var(--white);
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.clientOfferText {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.clientOfferText strong {
+    color: var(--olive-dark);
+    font-size: 1.05rem;
+}
+
+.qualityBanner {
+    background-color: rgba(75, 83, 71, 0.04);
+    border-left: 3px solid var(--olive-dark);
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 0 6px 6px 0;
+    max-width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .qualityBanner {
+        text-align: center;
+        border-left: none;
+        border-top: 3px solid var(--olive-dark);
+        border-radius: 0 0 6px 6px;
+    }
+}
+
+.qualityBanner strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--olive-dark);
+    margin-bottom: 6px;
+    font-family: var(--font-heading);
+}
+
+.qualityBanner p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #555d51;
+    margin: 0;
+}
+
+/* Sub-product ingredients styling */
+.subIngredientsBox {
+    background-color: #f9f6f2;
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+.subIngTitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--olive-dark);
+    margin-bottom: 6px;
+}
+
+.subIngList {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #555d51;
+}
+
+.expandToggle {
+    font-size: 0.65rem;
+    color: var(--olive-light);
+    text-transform: none;
+    font-weight: normal;
+    margin-left: 5px;
+    letter-spacing: 0.5px;
+}

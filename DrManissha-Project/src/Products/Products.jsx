@@ -3,6 +3,33 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../animations";
 import styles from "./Products.module.css";
 
+const CollapsibleIngredients = ({ ingredients }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  const list = ingredients.split(', ');
+  const limit = 5;
+  const hasMore = list.length > limit;
+  
+  const displayedText = isExpanded || !hasMore
+    ? ingredients
+    : list.slice(0, limit).join(', ') + '...';
+
+  return (
+    <div 
+      className={styles.subIngredientsBox} 
+      onClick={() => hasMore && setIsExpanded(!isExpanded)}
+      style={{ cursor: hasMore ? 'pointer' : 'default' }}
+    >
+      <h6 className={styles.subIngTitle}>
+        Ingredients {hasMore && <span className={styles.expandToggle}>({isExpanded ? 'Show Less' : 'Show More'})</span>}
+      </h6>
+      <p className={styles.subIngList}>
+        {displayedText}
+      </p>
+    </div>
+  );
+};
+
 const Products = () => {
   const [deliveryFee, setDeliveryFee] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -69,14 +96,25 @@ const Products = () => {
               </h3>
 
               <div className={styles.priceContainer}>
-                {/* <span className={styles.crossedPrice}>760 AED</span> */}
                 <span className={styles.presalePrice}>760 AED</span>
-                {/* <span className={styles.priceNote}>Pre-Sale Offer</span> */}
+                <span className={styles.priceNote}>Retail Price</span>
+              </div>
+
+              <div className={styles.clientOfferBox}>
+                <span className={styles.clientOfferBadge}>Special Offer</span>
+                <p className={styles.clientOfferText}>
+                  <strong>555 AED</strong> for previous clients or discovery/consultation call bookings (claim via WhatsApp).
+                </p>
               </div>
 
               <p className={styles.prodDesc}>
                 Manetraa is a four-part ritual kit rooted in Ayurveda, designed to work with your body’s hormonal rhythm rather than against it. Each formulation targets a different layer of the Hair Hormone Method™️ — from root nourishment to nervous system regulation.
               </p>
+
+              <div className={styles.qualityBanner}>
+                <strong>Rooted in Ayurveda. Backed by Global Quality Standards.</strong>
+                <p>Every House of Manetraa product is manufactured in an ISO-certified Ayurvedic facility in India, where time-honored herbal wisdom meets rigorous quality control, safety testing, and manufacturing excellence.</p>
+              </div>
 
               <div className={styles.purchaseActions}>
                 <a
@@ -88,17 +126,17 @@ const Products = () => {
                   Buy Now
                 </a>
                 <a
-                  href="https://wa.me/971589771786?text=Hi%20Dr%20Manissha,%20I'd%20like%20to%20get%20the%20special%20pre-sale%20link%20for%20the%20Manetraa%20Rituals%20Kit."
+                  href="https://wa.me/971589771786?text=Hi%20Dr%20Manissha,%20I'm%20a%20previous%20client/have%20taken%20a%20call%20and%20would%20like%20to%20claim%20the%20Manetraa%20Rituals%20Kit%20for%20AED%20555."
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappPresaleBtn}
                 >
-                  <i className="ri-whatsapp-line"></i> Order via WhatsApp
+                  <i className="ri-whatsapp-line"></i> Claim Client Price
                 </a>
               </div>
 
               <p className={styles.whatsappNote}>
-                Until July 8th, the pre-sale is live. Want the special pre-sale link or have questions? Reach out directly via WhatsApp.
+                Previous client or took a discovery/consultation call? Reach out directly via WhatsApp to claim the AED 555 special pricing.
               </p>
             </div>
           </div>
@@ -119,6 +157,7 @@ const Products = () => {
                 <p className={styles.subProductDesc}>
                   A restorative blend that nourishes follicles at the root for stronger, denser growth over time.
                 </p>
+                <CollapsibleIngredients ingredients="Cold-Pressed Coconut Oil, Extra Virgin Olive Oil, Sweet Almond Oil, Jamaican Black Castor Oil, Cold-Pressed Pumpkin Seed Oil, Cold-Pressed Black Seed Oil, Neem Seed Oil, Bhringraj Leaf Extract, Brahmi Leaf Extract, Amla Fruit Extract, Ashwagandha Root Extract, Shikakai Bark Extract, Tulsi Leaf Extract, Fenugreek Seed Extract, Mahabrahmi Complex (Centella + Brahmi), Sesame Oil, Rosemary Leaf CO2 Extract, Rosemary Essential Oil, Tea Tree Essential Oil, Peppermint Essential Oil, Cedarwood Essential Oil, Vitamin E (Tocopherol)" />
               </div>
 
               {/* Kit Item 2 */}
@@ -130,6 +169,7 @@ const Products = () => {
                 <p className={styles.subProductDesc}>
                   An ancient navel-healing ritual oil, working on the body’s energetic center to support hormonal and digestive balance.
                 </p>
+                <CollapsibleIngredients ingredients="Cold-Pressed Sesame Oil, Jamaican Black Castor Oil, Cold-Pressed Flaxseed Oil, Moringa Seed Oil, Ashwagandha Root Extract, Shatavari Root Extract, Triphala Extract, Guduchi Extract, Manjistha Root Extract, Vidari Kanda Extract, Ginger Essential Oil, Fennel Essential Oil, Vetiver Essential Oil, Vitamin E (Tocopherol)" />
               </div>
 
               {/* Kit Item 3 */}
@@ -141,6 +181,7 @@ const Products = () => {
                 <p className={styles.subProductDesc}>
                   A detoxifying oil-pulling blend that brightens and strengthens from within, drawing on a centuries-old Ayurvedic oral care practice.
                 </p>
+                <CollapsibleIngredients ingredients="Cold-Pressed Sesame Oil, Cold-Pressed Coconut Oil, Clove Bud Extract, Neem Leaf Extract, Triphala Extract, Licorice Root Extract, Turmeric CO2 Extract, Spearmint Essential Oil, Clove Bud Essential Oil, Cardamom Essential Oil, Fennel Essential Oil, Vitamin E (Tocopherol)" />
               </div>
 
               {/* Kit Item 4 */}
@@ -152,6 +193,7 @@ const Products = () => {
                 <p className={styles.subProductDesc}>
                   Botanical hair perfume with UV-shield actives to protect your strands all day, staying clean of the hormone-disrupting chemicals hiding in most fragrances.
                 </p>
+                <CollapsibleIngredients ingredients="Fractionated Coconut Oil (MCT), Argan Oil, Meadowfoam Seed Oil, Raspberry Seed Oil, Jojoba Oil, Sandalwood Oil (Chandan), Amla CO2 Extract, Hibiscus Flower Extract, Brahmi Leaf Extract, Bergamot Essential Oil (FCF), Pink Pepper Essential Oil, Clary Sage Essential Oil, Jasmine Sambac Absolute, Rose Absolute, Neroli Essential Oil, Sandalwood Oil, Cedarwood Essential Oil, Vetiver Essential Oil, Ambrette Seed Absolute, Vitamin E (Tocopherol), Rosemary CO2 Extract" />
               </div>
             </div>
           </div>
