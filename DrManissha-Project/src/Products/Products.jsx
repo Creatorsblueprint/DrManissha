@@ -264,7 +264,7 @@ const Products = () => {
               </div>
               <div className={styles.affiliateInfoCol}>
                 <span className={styles.category}>PARTNER DIAGNOSTICS</span>
-                <h3 className={styles.affiliateTitle}>Valeo Hair Hormone Test Toolkit</h3>
+                <h3 className={styles.affiliateTitle}>Valeo Hair & Hormone Test Toolkit</h3>
                 <p className={styles.affiliateDesc}>
                   A comprehensive, at-home bloodwork test designed to analyze your primary hair and hormone biomarkers. This test is highly recommended as a preliminary step to gather biological data before scheduling your one-on-one consultation with Dr. Manissha.
                 </p>
