@@ -52,7 +52,7 @@ const Products = () => {
         >
           <div className={styles.kitGrid}>
             <div className={styles.kitImageCol}>
-              <div className={styles.badge}>Pre-Sale Special</div>
+              {/* <div className={styles.badge}>Pre-Sale Special</div> */}
               <div className={styles.kitImageWrapper}>
                 <img
                   src="/Images/product_kit.PNG"
@@ -69,9 +69,9 @@ const Products = () => {
               </h3>
 
               <div className={styles.priceContainer}>
-                <span className={styles.crossedPrice}>760 AED</span>
-                <span className={styles.presalePrice}>555 AED</span>
-                <span className={styles.priceNote}>Pre-Sale Offer</span>
+                {/* <span className={styles.crossedPrice}>760 AED</span> */}
+                <span className={styles.presalePrice}>760 AED</span>
+                {/* <span className={styles.priceNote}>Pre-Sale Offer</span> */}
               </div>
 
               <p className={styles.prodDesc}>
