@@ -113,7 +113,7 @@ const Products = () => {
 
               <div className={styles.qualityBanner}>
                 <strong>Rooted in Ayurveda. Backed by Global Quality Standards.</strong>
-                <p>Every House of Manetraa product is manufactured in an ISO-certified Ayurvedic facility in India, where time-honored herbal wisdom meets rigorous quality control, safety testing, and manufacturing excellence.</p>
+                <p>Every House of Manetraa product is manufactured in an AYUSH-certified Ayurvedic facility in India, where time-honored herbal wisdom meets rigorous quality control, safety testing, and manufacturing excellence.</p>
               </div>
 
               <div className={styles.purchaseActions}>
@@ -236,13 +236,14 @@ const Products = () => {
                 <div className={styles.ingredientsBox}>
                   <h4 className={styles.ingTitle}>Ingredients</h4>
                   <p className={styles.ingList}>
-                    Cold pressed coconut oil, Olive oil, Almond oil, Castor oil,
-                    Black onion seed oil, Fenugreek oil, Rosemary leaf extract,
-                    Rosemary Essential Oil, Tea tree Essential Oil, Peppermint
-                    Essential Oil, Brahmi leaf extract, Shikakai bark extract,
-                    Tulsi leaf extract, Bhringraj leaf extract, Ashwagandha root
-                    extract, Amla fruit extract, Pumpkin seed oil, Saw palmetto
-                    fruit extract, Saffron.
+                    Cold-Pressed Coconut Oil, Extra Virgin Olive Oil, Sweet Almond Oil, 
+                    Jamaican Black Castor Oil, Cold-Pressed Pumpkin Seed Oil, 
+                    Cold-Pressed Black Seed Oil, Neem Seed Oil, Bhringraj Leaf Extract, 
+                    Brahmi Leaf Extract, Amla Fruit Extract, Ashwagandha Root Extract, 
+                    Shikakai Bark Extract, Tulsi Leaf Extract, Fenugreek Seed Extract, 
+                    Mahabrahmi Complex (Centella + Brahmi), Sesame Oil, Rosemary Leaf CO2 Extract, 
+                    Rosemary Essential Oil, Tea Tree Essential Oil, Peppermint Essential Oil, 
+                    Cedarwood Essential Oil, Vitamin E (Tocopherol).
                   </p>
                 </div>
 
